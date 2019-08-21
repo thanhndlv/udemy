@@ -1,0 +1,24 @@
+.footer {
+  font-size: $fs-1;
+  padding: $pd-2;
+  background-color: $bg-color;
+  line-height: $line-height-0;
+  width: 100%;
+  .container-fluid {
+    max-width: 1440px;
+    padding-left: 20px;
+    padding-right: 20px;
+    .links {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 110px;
+      li{
+          list-style: none;
+      }
+    }
+  }
+  .footer__main {
+    margin: 40px auto 30px;
+  }
+}
