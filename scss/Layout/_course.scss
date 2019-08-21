@@ -1,0 +1,90 @@
+.course{
+    margin: $mg-2 0;
+    .course_content{
+        max-width: 1405px;
+        width: 100%;
+        margin: auto;
+        .des__box{
+        background: #f7f8fa;
+        }
+        .course_title{
+            @include text($color-black-0, $fs-4 - 4, $fw-normal);
+            padding-top: 8rem;
+        }
+    }
+    .myTab{
+        margin-bottom: $mg-2;
+        border-bottom:none;
+        .nav-link{
+            @include text($color-black-0, $fs-0, $fw-normal);
+            
+        }
+        .nav-link:hover{
+            border:none;
+        }
+        .nav-link.active{
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 5px solid $color-blue;
+        }
+    }
+    .myContent {
+        position: relative;
+        .card{
+            height: 275px;
+            overflow: hidden;
+            .card-body{
+                padding: 1rem;
+                .card-title{
+                    display: -webkit-box;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    min-height: 39px;
+                    -webkit-line-clamp: 2;
+                    -moz-line-clamp: 2;
+                    -ms-line-clamp: 2;
+                    -o-line-clamp: 2;
+                    line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    -moz-box-orient: vertical;
+                    -ms-box-orient: vertical;
+                    -o-box-orient: vertical;
+                    box-orient: vertical;
+                    @include text($color-black-0, $fs-0, $fw-bold-0);
+                }
+                .card-text{
+                    @include text($color-gray-4, $fs-1 - 1, $fw-normal );
+                    margin: $mg-1 - 5 0;
+                }
+                .star{
+                    @include text($color-yellow, $fs-1 - 1, $fw-normal );
+                }
+                .number_average{
+                    @include text($color-gray-4, $fs-1, $fw-bold-0 );
+                }
+                .number_rating{
+                    @include text($color-gray-4, $fs-1, $fw-normal );
+                }
+                .price{
+                    text-align: right;
+                    padding: $pd-1 0;
+                    span:first-child{
+                        @include text($color-gray-4, $fs-1, $fw-normal);
+                        text-decoration: line-through;
+                    }
+                    span:last-child{
+                        @include text($color-black-0, $fs-0, $fw-bold-0);
+                    }
+                }
+            }
+        }
+    }
+    @include reponds-to('medium'){
+        .course_content{
+            .course_title{
+                padding-top: 1rem;
+            }
+        }
+    }
+}

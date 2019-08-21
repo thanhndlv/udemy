@@ -1,0 +1,20 @@
+@import "Helpers/_variable.scss";
+@import 'Base/_reset.scss';
+@import 'Base/_normalized.scss';
+@import "Helpers/_mixin.scss";
+@import "Helpers/_extend.scss";
+@import "Helpers/_function.scss";
+
+@import "Layout/_header.scss";
+@import "Layout/_cover.scss";
+@import "Layout/_intro.scss";
+@import "Layout/_course.scss";
+@import "Layout/_view.scss";
+@import "Layout/_categories.scss";
+@import "Layout/_student.scss";
+@import "Layout/_banner.scss";
+@import "Layout/_partner.scss";
+@import "Layout/_job.scss";
+@import "Layout/_footer.scss";
+
+@import "Component/_button.scss";

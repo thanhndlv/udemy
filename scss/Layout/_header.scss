@@ -1,0 +1,166 @@
+.myNavBar {
+  padding: $pd-3;
+  border-bottom: 1px solid $color-gray-3;
+  background: $bg-color;
+  box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
+  display: block;
+  position: relative;
+  z-index: 1010;
+  .myNavBarInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: inherit;
+    box-sizing: border-box;
+    height: 65px;
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 $pd-2;
+    position: relative;
+    z-index: 1011;
+    .myNavBar__left {
+      flex-wrap: wrap;
+      .navbar-brand {
+        img {
+          width: 110px;
+        }
+        flex-grow: 1;
+      }
+      .categories {
+        margin-top: $mg-0;
+        @include text($color-black-light, $fs-1, $fw-normal);
+        cursor: pointer;
+        flex-grow: 1;
+        padding-top: $pd-2 - 5;
+        i {
+          color: $color-gray-2;
+        }
+      }
+      .form_search {
+        flex-grow: 4;
+        // padding-top: $pd-1;
+        input {
+          background-color: $color-gray-1;
+          font-size: $fs-1;
+          border-radius: 0;
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          -ms-border-radius: 0;
+          -o-border-radius: 0;
+          border: 1px solid $color-gray-1;
+          border-right: 1px solid transparent;
+          padding: $pd-1 + 2 $pd-1 + 5;
+          &:focus {
+            background-color: $color-white-0;
+            border: 1px solid $color-gray-3;
+            box-shadow: none;
+          }
+        }
+        .input-group-text {
+          background-color: $color-gray-1;
+          font-size: $fs-0;
+          border-radius: 0;
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          -ms-border-radius: 0;
+          -o-border-radius: 0;
+          border: none;
+          cursor: pointer;
+          i {
+            color: $color-red-0;
+          }
+          &:hover {
+            background-color: $color-red-0;
+            i {
+              color: $color-white-0;
+            }
+          }
+        }
+      }
+    }
+    #myNavBarID {
+      .nav-item {
+        flex-grow: 1;
+        position: relative;
+        .overlay {
+          display: none;
+          position: absolute;
+          background-color: $color-white-0;
+          padding: $pd-2;
+          border: 1px solid $color-gray-2;
+          width: 350px;
+          top: 56px;
+          left: -100%;
+          &:before {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: -9px;
+            right: 10%;
+            background-color: $color-white-0;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            border-top: 1px solid $color-gray-2;
+            border-left: 1px solid $color-gray-2;
+            z-index: 3;
+          }
+          a{
+            font-size: $fs-1;
+            color: $color-blue;
+            font-weight: $fw-bold;
+            &:hover{
+                color: $color-gray-4;
+            }
+          }
+        }
+        .nav-link {
+          @include text($color-black-light, $fs-1, $fw-normal);
+          margin-top: $mg-0 + 3;
+        }
+        &:hover {
+          background-color: $color-gray-1;
+          .overlay {
+            display: block;
+            z-index: 2;
+          }
+        }
+      }
+      .icon_cart {
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        max-width: 50px;
+        i {
+          font-size: $fs-2;
+        }
+      }
+      .nav__button {
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+    @include reponds-to("extra-large") {
+      #myNavBarID {
+        .bussiness,
+        .instructor {
+          display: none;
+        }
+      }
+    }
+
+    @include reponds-to("medium") {
+      .categories,
+      .form_search {
+        display: none;
+      }
+    }
+  }
+}
